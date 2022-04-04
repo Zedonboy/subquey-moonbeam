@@ -17,4 +17,5 @@ type Reward @entity{
   id: ID!
   amount: BigInt!
   address: String!
+  blockNumber: String
 }

@@ -16,6 +16,7 @@ export async function handleEvent(event: SubstrateEvent): Promise<void> {
     let record = new Reward(event.block.block.header.hash.toString())
     record.address = account.toString()
     record.amount = (reward as Balance).toBigInt();
+    record.blockNumber = event.block.block.header.number.toString()
     //Retrieve the record by its ID
     // const record = await StarterEntity.get(event.block.block.header.hash.toString());
     // record.field2 = account.toString();
